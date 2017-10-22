@@ -21,7 +21,7 @@ connection.connect(function(err){
 });
 
 
-
+// Make a table that displays everything in the database
 var makeTable = function(){
 	connection.query("SELECT * FROM products", function(err,res){
 		for (var i=0; i<res.length; i++){
@@ -39,7 +39,7 @@ var makeTable = function(){
 
 
 
-
+//Use inquirer to select get user selections and make changes to the database
 var promptCustomer = function(res){
 	inquirer.prompt([{
 		type: 'input',
